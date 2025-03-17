@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AaaS (Arrows as a Service)",
+  "version": "1.0",
+  "description": "Extensión para navegar imágenes y videos con teclas direccionales y las teclas 'A' y 'S'.",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon/AaaS logo.png",
+      "48": "images/icon/AaaS logo.png",
+      "128": "images/icon/AaaS logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon/AaaS logo.png",
+    "48": "images/icon/AaaS logo.png",
+    "128": "images/icon/AaaS logo.png"
+  }
+}
